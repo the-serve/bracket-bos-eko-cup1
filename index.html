@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BOS EKO CUP 1 – Bracket Turnamen MLBB 18 Tim</title>
+
+    <style>
+      /* ------- Global ------- */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: #000000;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* ------- Header ------- */
+      header {
+        text-align: center;
+        padding: 15px 0 8px 0;
+        background: #000000;
+        border-bottom: 3px solid #d4af37;
+      }
+
+      /* logo utama */
+      .logo-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6px;
+      }
+
+      header h1 {
+        margin: 4px 0 0 0;
+        color: #d4af37;
+        letter-spacing: 1px;
+        font-weight: 900;
+      }
+
+      header p {
+        color: #dddddd;
+        margin-top: 3px;
+      }
+
+      /* ------- Wrapper ------- */
+      .wrapper {
+        padding: 15px 0 40px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .section {
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      /* group atas */
+      .top-groups {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      /* kolom umum */
+      .column {
+        min-width: 250px;
+        max-width: 300px;
+        flex: 1;
+      }
+
+      /* judul kolom */
+      .column h3 {
+        text-align: center;
+        color: #e6c978;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      /* ------- Match Box ------- */
+      .match {
+        background: linear-gradient(180deg, #0a0a0a, #000000);
+        border: 2px solid #d4af37;
+        border-radius: 12px;
+        padding: 8px;
+        margin: 12px 0;
+        box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+      }
+
+      .team {
+        padding: 6px 4px;
+        border-bottom: 1px solid #444;
+      }
+
+      .team:last-child {
+        border-bottom: none;
+      }
+
+      .label {
+        font-size: 11px;
+        text-align: right;
+        color: #d4af37;
+      }
+
+      /* lower box putih */
+      .lower .match {
+        border-color: #ffffff;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+      }
+
+      /* ===== LOWER BRACKET ===== */
+      .lower-section {
+        width: 100%;
+        margin-top: 35px;
+      }
+
+      .lower-section h2 {
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+
+      /* ukuran lower sekarang DISESUAIKAN dengan kolom lain */
+      .lower-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .lower-wrapper .column {
+        min-width: 250px;
+        max-width: 300px;
+      }
+
+      /* ===== SPONSOR FOOTER ===== */
+      .footer-sponsor {
+        margin-top: 40px;
+        padding: 15px 0 25px 0;
+        text-align: center;
+        border-top: 2px solid #d4af37;
+      }
+
+      .footer-sponsor h3 {
+        margin-bottom: 8px;
+        color: #d4af37;
+      }
+
+      .sponsor-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .sponsor-row img {
+        height: 70px;
+      }
+
+      /* samakan ukuran kolom final */
+      .match-final-equal {
+        width: 420px;
+        max-width: 420px;
+      }
+
+      /* pastikan center */
+      .center-block,
+      .lower-final-center {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* buat tinggi & padding konsisten */
+      .match-final-equal .team {
+        font-size: 16px;
+      }
+
+      .match-final-equal {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      /* HP & tablet kecil */
+      @media (max-width: 900px) {
+        .top-groups {
+          flex-direction: column;
+        }
+
+        .column {
+          width: 100%;
+          max-width: 520px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .lower-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .sponsor-row img {
+          height: 55px;
+        }
+      }
+
+      /* HP kecil */
+      @media (max-width: 420px) {
+        header h1 {
+          font-size: 18px;
+        }
+
+        .team {
+          font-size: 12px;
+        }
+
+        .label {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- LOGO BOS EKO -->
+      <div class="logo-main">
+        <img src="LOGO.png" alt="BOS EKO" style="height: 95px" />
+      </div>
+
+      <h1>BOS EKO CUP 1</h1>
+
+      <p>Play-in ➜ 16 Besar ➜ Upper & Lower 8 Besar ➜ Final</p>
+    </header>
+
+    <div class="wrapper">
+      <div class="section">
+        <!-- ==================== BAGIAN ATAS ==================== -->
+        <div class="top-groups">
+          <!-- PLAY-IN -->
+          <div class="column">
+            <h3>Play-In (BO3)</h3>
+
+            <div class="match">
+              <div class="label">MATCH P1</div>
+              <div class="team">Tim 17</div>
+              <div class="team">Tim 18</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH P2</div>
+              <div class="team">Tim 15</div>
+              <div class="team">Tim 16</div>
+            </div>
+          </div>
+
+          <!-- 16 BESAR -->
+          <div class="column">
+            <h3>16 Besar (BO3)</h3>
+
+            <div class="match">
+              <div class="label">MATCH 1</div>
+              <div class="team">Tim 1</div>
+              <div class="team">Tim 2</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 2</div>
+              <div class="team">Tim 3</div>
+              <div class="team">Tim 4</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 3</div>
+              <div class="team">Tim 5</div>
+              <div class="team">Tim 6</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 4</div>
+              <div class="team">Tim 7</div>
+              <div class="team">Tim 8</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 5</div>
+              <div class="team">Tim 9</div>
+              <div class="team">Tim 10</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 6</div>
+              <div class="team">Tim 11</div>
+              <div class="team">Tim 12</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 7</div>
+              <div class="team">Tim 13</div>
+              <div class="team">Winner P1</div>
+            </div>
+            <div class="match">
+              <div class="label">MATCH 8</div>
+              <div class="team">Tim 14</div>
+              <div class="team">Winner P2</div>
+            </div>
+          </div>
+
+          <!-- UPPER -->
+          <div class="column">
+            <h3>Upper Bracket</h3>
+
+            <div class="match">
+              <div class="label">UB1</div>
+              <div class="team">Winner M1</div>
+              <div class="team">Winner M2</div>
+            </div>
+            <div class="match">
+              <div class="label">UB2</div>
+              <div class="team">Winner M3</div>
+              <div class="team">Winner M4</div>
+            </div>
+            <div class="match">
+              <div class="label">UB3</div>
+              <div class="team">Winner M5</div>
+              <div class="team">Winner M6</div>
+            </div>
+            <div class="match">
+              <div class="label">UB4</div>
+              <div class="team">Winner M7</div>
+              <div class="team">Winner M8</div>
+            </div>
+
+            <h4>Upper Semifinal</h4>
+            <div class="match">
+              <div class="label">UB5</div>
+              <div class="team">Winner UB1</div>
+              <div class="team">Winner UB2</div>
+            </div>
+            <div class="match">
+              <div class="label">UB6</div>
+              <div class="team">Winner UB3</div>
+              <div class="team">Winner UB4</div>
+            </div>
+
+            <h4>Upper Final</h4>
+            <div class="match">
+              <div class="label">UB7</div>
+              <div class="team">Winner UB5</div>
+              <div class="team">Winner UB6</div>
+            </div>
+          </div>
+        </div>
+        <!-- end top groups -->
+
+        <!-- ==================== LOWER DI BAWAH ==================== -->
+
+        <div class="lower-section">
+          <h2 style="text-align: center">LOWER BRACKET</h2>
+
+          <div class="lower-wrapper">
+            <div class="column lower">
+              <h4>Lower Round 1</h4>
+              <div class="match">
+                <div class="label">LB1</div>
+                <div class="team">Loser UB1</div>
+                <div class="team">Loser UB2</div>
+              </div>
+              <div class="match">
+                <div class="label">LB2</div>
+                <div class="team">Loser UB3</div>
+                <div class="team">Loser UB4</div>
+              </div>
+
+              <h4>Lower Quarterfinal</h4>
+              <div class="match">
+                <div class="label">LB3</div>
+                <div class="team">Winner LB1</div>
+                <div class="team">Loser UB5</div>
+              </div>
+              <div class="match">
+                <div class="label">LB4</div>
+                <div class="team">Winner LB2</div>
+                <div class="team">Loser UB6</div>
+              </div>
+
+              <h4>Lower Semifinal</h4>
+              <div class="match">
+                <div class="label">LB5</div>
+                <div class="team">Winner LB3</div>
+                <div class="team">Winner LB4</div>
+              </div>
+
+              <h4>Lower Final</h4>
+              <div class="match">
+                <div class="label">LB6</div>
+                <div class="team">Winner LB5</div>
+                <div class="team">Loser Upper Final</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== GRAND FINAL ==================== -->
+
+        <h4
+          style="
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: #d4af37;
+            font-size: 35px;
+          "
+        >
+          Grand Final Bos Eko Cup 1
+        </h4>
+        <div class="lower-final-center">
+          <div class="match match-final-equal">
+            <div class="label">GRAND FINAL</div>
+            <div class="team">Winner Upper Final</div>
+            <div class="team">Winner Lower Final</div>
+          </div>
+        </div>
+
+        <!-- ==================== GRAND FINAL ==================== -->
+
+        <h4
+          style="
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: #d4af37;
+            font-size: 35px;
+          "
+        >
+          Juara Bos Eko Cup 1
+        </h4>
+        <div class="lower-final-center">
+          <div class="match match-final-equal">
+            <div class="team">Winner Final</div>
+          </div>
+        </div>
+
+        <!-- ==================== SPONSOR DI BAWAH ==================== -->
+        <div class="footer-sponsor">
+          <h3>SPONSOR RESMI</h3>
+
+          <div class="sponsor-row">
+            <img src="LOGO.png" />
+            <img src="Logo_Indomaret.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
